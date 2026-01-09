@@ -1,80 +1,105 @@
-# Polymarket Bitcoin Charts
+# 🚀 Polymarket Bitcoin Charts
 
-A React application for visualizing Polymarket Bitcoin event probabilities over time.
+> 📊 **Live Demo**: <https://letni1.github.io/polymarket_charts/>
 
-## Features
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![Polymarket](https://img.shields.io/badge/Polymarket-API-1E90FF?logo=ethereum&logoColor=white)](https://polymarket.com/)
 
-- Input Polymarket event URLs
-- Display event outcomes with current probabilities
-- Interactive checkboxes to select outcomes for charting
-- Real-time probability charts with timestamps
-- Responsive design
+✨ **Interactive Bitcoin prediction market visualization** - Track real-time probabilities and price movements for Bitcoin prediction events on Polymarket!
 
-## Getting Started
+## 🎯 Features
 
-1. Install dependencies:
+- 🔗 **Easy Event Loading** - Simply paste any Polymarket event URL
+- 📈 **Interactive Charts** - Beautiful probability charts with real-time data
+- ✅ **Multi-Outcome Selection** - Compare different outcomes side-by-side
+- 📱 **Responsive Design** - Works perfectly on desktop and mobile
+- ⚡ **Fast Performance** - Built with Vite for lightning-fast loading
+- 🎨 **Modern UI** - Clean, intuitive interface
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
 ```bash
+# Clone the repository
+git clone https://github.com/letni1/polymarket_charts.git
+cd polymarket_charts
+
+# Install dependencies
 npm install
-```
 
-2. Start the development server:
-```bash
+# Start development server
 npm run dev
 ```
 
-3. Open your browser to the URL shown in the terminal (usually http://localhost:5173)
+Open your browser to the URL shown in the terminal (usually `http://localhost:5173`)
 
-## Usage
+## 📖 How to Use
 
-1. Paste a Polymarket event URL (e.g., `https://polymarket.com/event/bitcoin-above-on-january-7?tid=1767822569297`)
-2. Click "Load Event" to fetch the event data
-3. Select outcomes using the checkboxes
-4. View the probability chart showing how prices changed over time
+1. **Copy a Polymarket Event URL**  
+   Example: `https://polymarket.com/event/bitcoin-above-on-january-7`
 
-## API Integration
+2. **Paste it into the app**  
+   The event data will load automatically
 
-The app uses Polymarket's API through a proxy to avoid CORS issues. The Vite development server proxies requests to `https://gamma-api.polymarket.com`.
+3. **Select outcomes to compare**  
+   Use checkboxes to choose which outcomes to visualize
 
-## Build
+4. **Analyze the charts**  
+   Watch how probabilities change over time!
 
-To build for production:
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18 with Hooks
+- **Build Tool**: Vite for blazing-fast development
+- **Charts**: Custom charting components
+- **Styling**: Modern CSS with responsive design
+- **Deployment**: GitHub Pages with automatic CI/CD
+
+## 📦 Build & Deploy
+
+### Build for Production
 ```bash
 npm run build
 ```
 
-## Deployment to GitHub Pages
-
-This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
-
-### Manual Deployment
-
-1. Build the project:
-```bash
-npm run build
-```
-
-2. Deploy to GitHub Pages:
+### Deploy to GitHub Pages
 ```bash
 npm run deploy
 ```
 
-Alternatively, you can use the deployment script:
+Or use the deployment script:
 ```bash
 ./deploy.sh
 ```
 
-### Automatic Deployment
+## 🤖 Automatic Deployment
 
-The project includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys to GitHub Pages when you push to the `main` branch.
+This project includes a GitHub Actions workflow that automatically deploys to GitHub Pages when you push to the `main` branch.
 
-To enable automatic deployment:
+### To enable automatic deployment:
 
 1. Push your code to a GitHub repository
-2. Go to your repository settings on GitHub
-3. Navigate to Settings > Pages
-4. Under "Build and deployment", select "GitHub Actions"
-5. The workflow will run automatically on the next push to `main`
+2. Go to **Settings > Pages** in your repository
+3. Under "Build and deployment", select **GitHub Actions**
+4. Your site will deploy automatically on every push to `main`
 
-Your site will be available at `https://[your-username].github.io/[repository-name]/`
+## 🎨 Customization
 
-**Note**: The `homepage` field in `package.json` is configured for repository name `polymarket_charts`. If your repository has a different name, update both the `homepage` field and the base path in the build script.
+### Repository Configuration
+The `homepage` field in `package.json` is configured for `polymarket_charts`. If your repository has a different name, update:
+
+- `package.json` → `homepage` field
+- Build script base path
+
+## 📊 Example Events to Try
+
+- Bitcoin price predictions
+
+---
+
+**Made with ❤️ for the Polymarket community**

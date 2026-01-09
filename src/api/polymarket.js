@@ -39,24 +39,7 @@ const getEventBySlug = async (slug) => {
     return event
   } catch (error) {
     console.error('Error fetching event by slug:', error)
-    
-    // Return mock data for demo purposes if API fails
-    console.log('Returning mock event data due to API failure')
-    return {
-      id: 'mock-event-' + Date.now(),
-      title: 'Bitcoin Above $78,000 on January 7?',
-      description: 'This market will resolve to "Yes" if the price of Bitcoin is strictly above $78,000 at any point between December 15, 2024, 12:00 PM ET and January 7, 2025, 12:00 PM ET, as reported by CoinGecko.',
-      slug: slug,
-      markets: [{
-        conditionId: 'mock-condition-' + Date.now(),
-        question: 'Bitcoin above $78,000 on January 7?',
-        description: 'This market will resolve to "Yes" if the price of Bitcoin is strictly above $78,000 at any point between December 15, 2024, 12:00 PM ET and January 7, 2025, 12:00 PM ET, as reported by CoinGecko.',
-        outcomes: '["Yes", "No"]',
-        outcomePrices: '["0.85", "0.15"]',
-        clobTokenIds: '["mock-yes-token", "mock-no-token"]',
-        groupItemTitle: '$78,000'
-      }]
-    }
+    throw error
   }
 }
 
@@ -270,17 +253,6 @@ export const fetchMarketHistory = async (clobTokenId) => {
     
   } catch (error) {
     console.error(`Failed to fetch price history for CLOB token ${clobTokenId}:`, error)
-    
-    // Return mock data for demo purposes if API fails
-    console.log('Returning mock data due to API failure')
-    const mockData = []
-    const now = Date.now()
-    for (let i = 0; i < 168; i++) { // 7 days * 24 hours
-      mockData.push({
-        timestamp: now - (i * 3600000), // Hourly data
-        price: 0.5 + (Math.random() - 0.5) * 0.3 // Random price around 0.5
-      })
-    }
-    return mockData.reverse()
+    return null
   }
 }

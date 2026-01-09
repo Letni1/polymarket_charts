@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-// Use the proxy in development, direct API in production
+// Use the proxy in development, CORS proxy in production
 const API_BASE = window.location.hostname === 'localhost' 
   ? '/api' 
-  : 'https://gamma-api.polymarket.com'
+  : 'https://cors-anywhere.herokuapp.com/https://gamma-api.polymarket.com'
 
 // Extract event slug from URL
 const extractEventSlug = (url) => {

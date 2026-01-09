@@ -3,7 +3,7 @@ import axios from 'axios'
 // Use the proxy in development, CORS proxy in production
 const API_BASE = window.location.hostname === 'localhost' 
   ? '/api' 
-  : 'https://api.allorigins.win/raw?url=https://gamma-api.polymarket.com'
+  : 'https://corsproxy.io/?https://gamma-api.polymarket.com'
 
 // Extract event slug from URL
 const extractEventSlug = (url) => {

@@ -3,7 +3,7 @@ import axios from 'axios'
 // Use the proxy in development, CORS proxy in production
 const API_BASE = window.location.hostname === 'localhost' 
   ? '/api' 
-  : 'https://cors-anywhere.herokuapp.com/https://gamma-api.polymarket.com'
+  : 'https://api.allorigins.win/raw?url=https://gamma-api.polymarket.com'
 
 // Extract event slug from URL
 const extractEventSlug = (url) => {
@@ -28,8 +28,7 @@ const getEventBySlug = async (slug) => {
     // Use the direct endpoint: /events/slug/{slug}
     const response = await axios.get(`${API_BASE}/events/slug/${slug}`, {
       headers: {
-        'Accept': 'application/json',
-        'User-Agent': 'Mozilla/5.0 (compatible; Polymarket-Charts/1.0)'
+        'Accept': 'application/json'
       },
       timeout: 10000 // 10 second timeout
     })

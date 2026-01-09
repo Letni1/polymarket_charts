@@ -77,4 +77,4 @@ To enable automatic deployment:
 
 Your site will be available at `https://[your-username].github.io/[repository-name]/`
 
-**Note**: Make sure the `homepage` field in `package.json` matches your GitHub Pages URL.
+**Note**: The `homepage` field in `package.json` is configured for repository name `polymarket_charts`. If your repository has a different name, update both the `homepage` field and the base path in the build script.
